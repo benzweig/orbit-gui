@@ -41,6 +41,8 @@ NSString *runCommand(NSString *commandToRun)
     return output;
 }
 
+
+
 int serviceNumber = 0;
 
 -(void)mouseEntered:(NSEvent *)theEvent {
@@ -48,11 +50,12 @@ int serviceNumber = 0;
     NSLog(@"Mouse entered %@", self.identifier);
     //runCommand(@"mkdir ~/MyProject");
     
-    if ([self.identifier isEqual: @"_NS:34"]) {
+    if ([self.identifier isEqual: @"_NS:36"]) {
         serviceNumber = 1;
-         NSLog(@"Value of serviceNumber = %d", serviceNumber);
+        NSLog(@"Value of serviceNumber = %d", serviceNumber);
+        
     }
-    if ([self.identifier isEqual: @"_NS:28"]) {
+    if ([self.identifier isEqual: @"_NS:29"]) {
         serviceNumber = 2;
          NSLog(@"Value of serviceNumber = %d", serviceNumber);
     }
@@ -64,13 +67,13 @@ int serviceNumber = 0;
 
 -(void)mouseDown:(NSEvent *)theEvent{
     if (serviceNumber == 1) {
-        runCommand(@"cd ~ && orbit create-project launchhack && cd launchhack && orbit create-service node && open .");
+        runCommand(@"rm -rf ~/launchhack1/ && cd ~ && orbit create-project launchhack1 && cd launchhack1 && orbit create-service node && open .");
     }
     if (serviceNumber == 2) {
-        runCommand(@"cd ~/My-iOS-Project && open ~/My-iOS-Project");
+        runCommand(@"rm -rf ~/launchhack2/ && cd ~ && orbit create-project launchhack2 && cd launchhack2 && orbit create-service node && open .");
     }
     if (serviceNumber == 3) {
-        runCommand(@"cd ~/My-Rails-Project && open ~/My-Rails-Project");
+        runCommand(@"rm -rf ~/launchhack3/ && cd ~ && orbit create-project launchhack3 && cd launchhack3 && orbit create-service node && open .");
     }
 }
 

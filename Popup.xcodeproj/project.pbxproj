@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6253448F1AA3824D00682B7F /* BGapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6253448C1AA3824D00682B7F /* BGapple.png */; };
+		625344901AA3824D00682B7F /* BGnode.png in Resources */ = {isa = PBXBuildFile; fileRef = 6253448D1AA3824D00682B7F /* BGnode.png */; };
+		625344911AA3824D00682B7F /* BGrails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6253448E1AA3824D00682B7F /* BGrails.png */; };
+		625344941AA3828500682B7F /* appleT.png in Resources */ = {isa = PBXBuildFile; fileRef = 625344921AA3828400682B7F /* appleT.png */; };
+		625344951AA3828500682B7F /* railsT.png in Resources */ = {isa = PBXBuildFile; fileRef = 625344931AA3828500682B7F /* railsT.png */; };
+		625344971AA3831100682B7F /* nodeT.png in Resources */ = {isa = PBXBuildFile; fileRef = 625344961AA3831100682B7F /* nodeT.png */; };
 		6282FDAC1AA2A02900C870DB /* node.png in Resources */ = {isa = PBXBuildFile; fileRef = 6282FDAB1AA2A02900C870DB /* node.png */; };
 		6282FDAE1AA2A02E00C870DB /* rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6282FDAD1AA2A02E00C870DB /* rails.png */; };
 		6282FDB01AA2A03200C870DB /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6282FDAF1AA2A03200C870DB /* apple.png */; };
@@ -28,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6253448C1AA3824D00682B7F /* BGapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BGapple.png; path = Popup/BGapple.png; sourceTree = "<group>"; };
+		6253448D1AA3824D00682B7F /* BGnode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BGnode.png; path = Popup/BGnode.png; sourceTree = "<group>"; };
+		6253448E1AA3824D00682B7F /* BGrails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BGrails.png; path = Popup/BGrails.png; sourceTree = "<group>"; };
+		625344921AA3828400682B7F /* appleT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appleT.png; path = Popup/appleT.png; sourceTree = "<group>"; };
+		625344931AA3828500682B7F /* railsT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = railsT.png; path = Popup/railsT.png; sourceTree = "<group>"; };
+		625344961AA3831100682B7F /* nodeT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nodeT.png; path = Popup/nodeT.png; sourceTree = "<group>"; };
 		6282FDAB1AA2A02900C870DB /* node.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = node.png; path = Popup/node.png; sourceTree = "<group>"; };
 		6282FDAD1AA2A02E00C870DB /* rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rails.png; path = Popup/rails.png; sourceTree = "<group>"; };
 		6282FDAF1AA2A03200C870DB /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apple.png; path = Popup/apple.png; sourceTree = "<group>"; };
@@ -176,6 +188,12 @@
 				DDF4EFAB16C80A510044D141 /* Status@2x.png */,
 				6282FDAB1AA2A02900C870DB /* node.png */,
 				6282FDAD1AA2A02E00C870DB /* rails.png */,
+				6253448C1AA3824D00682B7F /* BGapple.png */,
+				625344921AA3828400682B7F /* appleT.png */,
+				625344931AA3828500682B7F /* railsT.png */,
+				6253448D1AA3824D00682B7F /* BGnode.png */,
+				625344961AA3831100682B7F /* nodeT.png */,
+				6253448E1AA3824D00682B7F /* BGrails.png */,
 				6282FDAF1AA2A03200C870DB /* apple.png */,
 				DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */,
 				DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */,
@@ -233,15 +251,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				625344901AA3824D00682B7F /* BGnode.png in Resources */,
 				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
 				6282FDAC1AA2A02900C870DB /* node.png in Resources */,
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
+				625344951AA3828500682B7F /* railsT.png in Resources */,
+				625344971AA3831100682B7F /* nodeT.png in Resources */,
+				6253448F1AA3824D00682B7F /* BGapple.png in Resources */,
 				6282FDB01AA2A03200C870DB /* apple.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
+				625344911AA3824D00682B7F /* BGrails.png in Resources */,
 				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
 				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
 				6282FDAE1AA2A02E00C870DB /* rails.png in Resources */,
+				625344941AA3828500682B7F /* appleT.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
