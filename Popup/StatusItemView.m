@@ -11,6 +11,9 @@
 
 #pragma mark -
 
+
+
+
 - (id)initWithStatusItem:(NSStatusItem *)statusItem
 {
     CGFloat itemWidth = [statusItem length];
@@ -59,6 +62,7 @@
 
 - (void)mouseDown:(NSEvent *)theEvent
 {
+    
     [NSApp sendAction:self.action to:self.target from:self];
 }
 
@@ -91,6 +95,10 @@
         }
     }
 }
+
+
+
+
 
 #pragma mark -
 

@@ -32,6 +32,14 @@ void *kContextActivePanel = &kContextActivePanel;
 {
     // Install icon into the menu bar
     self.menubarController = [[MenubarController alloc] init];
+    
+    //This is the only way to be compatible to all ~30 menu styles (e.g. dark mode) available in Yosemite
+    
+    // register with an array of types you'd like to accept
+    
+    [self.menubarController.statusItemView.window registerForDraggedTypes:@[NSFilenamesPboardType]];
+    self.menubarController.statusItemView.window.delegate = self;
+    
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
@@ -65,6 +73,32 @@ void *kContextActivePanel = &kContextActivePanel;
 - (StatusItemView *)statusItemViewForPanelController:(PanelController *)controller
 {
     return self.menubarController.statusItemView;
+}
+
+- (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
+    
+    
+    [self.menubarController.statusItemView mouseDown:nil];
+    
+    
+    NSLog(@"dfdfdfs");
+    //Get the files from the drop
+    NSArray * files = [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType];
+    
+    for(id file in files){
+        
+        NSLog(@"String1 -- '%@'", [NSString stringWithFormat:@"%@", file]); // works
+        
+        
+    }
+    
+    return YES;
+    //[NSApp sendAction:self.action to:self.target from:self];
+    return NSDragOperationCopy;
+}
+
+- (void)draggingEnded:(id<NSDraggingInfo>)sender{
+    [self.menubarController.statusItemView mouseDown:nil];
 }
 
 @end
