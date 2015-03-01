@@ -64,13 +64,13 @@ int serviceNumber = 0;
 
 -(void)mouseDown:(NSEvent *)theEvent{
     if (serviceNumber == 1) {
-        runCommand(@"orbit create-project My-Node.js-Project && cd ~/My-Node.js-Project && orbit create-service node && open ~/My-Node.js-Project");
+        runCommand(@"cd ~ && orbit create-project launchhack && cd launchhack && orbit create-service node && open .");
     }
     if (serviceNumber == 2) {
-        runCommand(@"mkdir ~/My-iOS-Project");
+        runCommand(@"cd ~/My-iOS-Project && open ~/My-iOS-Project");
     }
     if (serviceNumber == 3) {
-        runCommand(@"mkdir ~/My-Rails-Project");
+        runCommand(@"cd ~/My-Rails-Project && open ~/My-Rails-Project");
     }
 }
 

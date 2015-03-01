@@ -147,7 +147,7 @@
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
-						<object class="NSSearchField" id="355203527">
+						<object class="NSSearchField" id="252454166">
 							<reference key="NSNextResponder" ref="290197886"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{26, 223}, {228, 22}}</string>
@@ -156,7 +156,7 @@
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSSearchFieldCell" key="NSCell" id="445242793">
+							<object class="NSSearchFieldCell" key="NSCell" id="858643866">
 								<int key="NSCellFlags">342884416</int>
 								<int key="NSCellFlags2">268436544</int>
 								<string key="NSContents"/>
@@ -166,7 +166,7 @@
 									<int key="NSfFlags">1044</int>
 								</object>
 								<string key="NSCellIdentifier">_NS:9</string>
-								<reference key="NSControlView" ref="355203527"/>
+								<reference key="NSControlView" ref="252454166"/>
 								<bool key="NSDrawsBackground">YES</bool>
 								<int key="NSTextBezelStyle">1</int>
 								<object class="NSColor" key="NSBackgroundColor">
@@ -191,9 +191,9 @@
 									<int key="NSCellFlags">0</int>
 									<int key="NSCellFlags2">0</int>
 									<string key="NSContents">search</string>
-									<reference key="NSControlView" ref="355203527"/>
+									<reference key="NSControlView" ref="252454166"/>
 									<string key="NSAction">_searchFieldSearch:</string>
-									<reference key="NSTarget" ref="445242793"/>
+									<reference key="NSTarget" ref="858643866"/>
 									<int key="NSButtonFlags">138690560</int>
 									<int key="NSButtonFlags2">0</int>
 									<string key="NSKeyEquivalent"/>
@@ -210,9 +210,9 @@
 											<integer value="1" key="NSAccessibilityEncodedAttributesValueType"/>
 										</dictionary>
 									</array>
-									<reference key="NSControlView" ref="355203527"/>
+									<reference key="NSControlView" ref="252454166"/>
 									<string key="NSAction">_searchFieldCancel:</string>
-									<reference key="NSTarget" ref="445242793"/>
+									<reference key="NSTarget" ref="858643866"/>
 									<int key="NSButtonFlags">138690560</int>
 									<int key="NSButtonFlags2">0</int>
 									<string key="NSKeyEquivalent"/>
@@ -306,7 +306,7 @@
 							<reference ref="998110809"/>
 							<reference ref="890383151"/>
 							<reference ref="271509633"/>
-							<reference ref="355203527"/>
+							<reference ref="252454166"/>
 						</array>
 						<reference key="parent" ref="194620731"/>
 					</object>
@@ -351,16 +351,16 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">126</int>
-						<reference key="object" ref="355203527"/>
+						<reference key="object" ref="252454166"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="445242793"/>
+							<reference ref="858643866"/>
 						</array>
 						<reference key="parent" ref="290197886"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">127</int>
-						<reference key="object" ref="445242793"/>
-						<reference key="parent" ref="355203527"/>
+						<reference key="object" ref="858643866"/>
+						<reference key="parent" ref="252454166"/>
 					</object>
 				</array>
 			</object>

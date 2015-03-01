@@ -40,6 +40,7 @@ void *kContextActivePanel = &kContextActivePanel;
     [self.menubarController.statusItemView.window registerForDraggedTypes:@[NSFilenamesPboardType]];
     self.menubarController.statusItemView.window.delegate = self;
     
+    // TODO: Run the orbit daemon with the entire menubar application, not per applicatino
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
