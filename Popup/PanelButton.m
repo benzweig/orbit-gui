@@ -7,7 +7,7 @@
 //
 
 #import "PanelButton.h"
-
+NSString *runCommand(NSString *commandToRun);
 
 @implementation PanelButton
 // Monkey patch from http://stackoverflow.com/a/12310154
@@ -21,7 +21,7 @@ NSString *runCommand(NSString *commandToRun)
                           @"-c" ,
                           [NSString stringWithFormat:@"%@", commandToRun],
                           nil];
-    NSLog(@"run command: %@",commandToRun);
+    NSLog(@"run command: %@", commandToRun);
     [task setArguments: arguments];
     
     NSPipe *pipe;
@@ -41,13 +41,10 @@ NSString *runCommand(NSString *commandToRun)
     return output;
 }
 
-
-//Add this to Your imageView subclass
-
 -(void)mouseEntered:(NSEvent *)theEvent {
     
     NSLog(@"Mouse entered %@", self.identifier);
-    NSString *output = runCommand(@"say it worked");
+    //runCommand(@"orbit");
 }
 
 -(void)mouseExited:(NSEvent *)theEvent
