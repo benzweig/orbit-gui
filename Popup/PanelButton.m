@@ -41,15 +41,45 @@ NSString *runCommand(NSString *commandToRun)
     return output;
 }
 
+int serviceNumber = 0;
+
 -(void)mouseEntered:(NSEvent *)theEvent {
     
     NSLog(@"Mouse entered %@", self.identifier);
-    //runCommand(@"orbit");
+    //runCommand(@"mkdir ~/MyProject");
+    
+    if ([self.identifier isEqual: @"_NS:34"]) {
+        serviceNumber = 1;
+         NSLog(@"Value of serviceNumber = %d", serviceNumber);
+    }
+    if ([self.identifier isEqual: @"_NS:28"]) {
+        serviceNumber = 2;
+         NSLog(@"Value of serviceNumber = %d", serviceNumber);
+    }
+    if ([self.identifier isEqual: @"_NS:13"]) {
+        serviceNumber = 3;
+         NSLog(@"Value of serviceNumber = %d", serviceNumber);
+    }
+}
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    if (serviceNumber == 1) {
+        runCommand(@"orbit create-project My-Node.js-Project && cd ~/My-Node.js-Project && orbit create-service node && open ~/My-Node.js-Project");
+    }
+    if (serviceNumber == 2) {
+        runCommand(@"mkdir ~/My-iOS-Project");
+    }
+    if (serviceNumber == 3) {
+        runCommand(@"mkdir ~/My-Rails-Project");
+    }
 }
 
 -(void)mouseExited:(NSEvent *)theEvent
 {
     NSLog(@"Mouse exited");
+    serviceNumber = 0;
+    NSLog(@"Value of serviceNumber = %d", serviceNumber);
+    
 }
 
 -(void)updateTrackingAreas
