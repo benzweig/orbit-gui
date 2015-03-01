@@ -66,14 +66,22 @@ int serviceNumber = 0;
 }
 
 -(void)mouseDown:(NSEvent *)theEvent{
+    
     if (serviceNumber == 1) {
-        runCommand(@"rm -rf ~/launchhack1/ && cd ~ && orbit create-project launchhack1 && cd launchhack1 && orbit create-service node && open .");
+        runCommand(@"rm -rf ~/launchhack1/ && cd ~ && orbit create-project launchhack1 && cd launchhack1 && orbit create-service node && open . && orbit daemon");
     }
     if (serviceNumber == 2) {
-        runCommand(@"rm -rf ~/launchhack2/ && cd ~ && orbit create-project launchhack2 && cd launchhack2 && orbit create-service node && open .");
+        runCommand(@"rm -rf ~/launchhack2/ && cd ~ && orbit create-project launchhack2 && cd launchhack2 && orbit create-service node && open . && orbit daemon");
     }
     if (serviceNumber == 3) {
-        runCommand(@"rm -rf ~/launchhack3/ && cd ~ && orbit create-project launchhack3 && cd launchhack3 && orbit create-service node && open .");
+        runCommand(@"rm -rf ~/yelp-for-yelp-reviews/ && cd ~ && orbit create-project yelp-for-yelp-reviews && cd yelp-for-yelp-reviews && open .");
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            runCommand(@"cd ~/yelp-for-yelp-reviews && orbit daemon");
+        });
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            runCommand(@"cd ~/yelp-for-yelp-reviews && orbit create-service rails && orbit run rails rails new .");
+        });
     }
 }
 
