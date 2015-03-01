@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6282FDAC1AA2A02900C870DB /* node.png in Resources */ = {isa = PBXBuildFile; fileRef = 6282FDAB1AA2A02900C870DB /* node.png */; };
+		6282FDAE1AA2A02E00C870DB /* rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6282FDAD1AA2A02E00C870DB /* rails.png */; };
+		6282FDB01AA2A03200C870DB /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6282FDAF1AA2A03200C870DB /* apple.png */; };
+		6282FDB41AA2FFBC00C870DB /* PanelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6282FDB31AA2FFBC00C870DB /* PanelButton.m */; };
 		DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F7C0813C30F9F00825C6E /* Cocoa.framework */; };
 		DD4F7C1513C30F9F00825C6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1413C30F9F00825C6E /* main.m */; };
 		DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */; };
@@ -24,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6282FDAB1AA2A02900C870DB /* node.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = node.png; path = Popup/node.png; sourceTree = "<group>"; };
+		6282FDAD1AA2A02E00C870DB /* rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rails.png; path = Popup/rails.png; sourceTree = "<group>"; };
+		6282FDAF1AA2A03200C870DB /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apple.png; path = Popup/apple.png; sourceTree = "<group>"; };
+		6282FDB21AA2FFBC00C870DB /* PanelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelButton.h; sourceTree = "<group>"; };
+		6282FDB31AA2FFBC00C870DB /* PanelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelButton.m; sourceTree = "<group>"; };
 		DD4F7C0413C30F9F00825C6E /* Popup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -119,6 +128,8 @@
 			children = (
 				DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */,
 				DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */,
+				6282FDB21AA2FFBC00C870DB /* PanelButton.h */,
+				6282FDB31AA2FFBC00C870DB /* PanelButton.m */,
 				DD4F7C3613C317A500825C6E /* MenubarController.h */,
 				DD4F7C3713C317A500825C6E /* MenubarController.m */,
 				DD4F7C3D13C318D600825C6E /* PanelController.h */,
@@ -163,6 +174,9 @@
 			children = (
 				DD4F7C4913C322FA00825C6E /* Status.png */,
 				DDF4EFAB16C80A510044D141 /* Status@2x.png */,
+				6282FDAB1AA2A02900C870DB /* node.png */,
+				6282FDAD1AA2A02E00C870DB /* rails.png */,
+				6282FDAF1AA2A03200C870DB /* apple.png */,
 				DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */,
 				DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */,
 			);
@@ -220,11 +234,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
+				6282FDAC1AA2A02900C870DB /* node.png in Resources */,
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
+				6282FDB01AA2A03200C870DB /* apple.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
 				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
 				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
+				6282FDAE1AA2A02E00C870DB /* rails.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +256,7 @@
 				DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */,
 				DD4F7C3813C317A500825C6E /* MenubarController.m in Sources */,
 				DD4F7C3C13C3180800825C6E /* StatusItemView.m in Sources */,
+				6282FDB41AA2FFBC00C870DB /* PanelButton.m in Sources */,
 				DD4F7C3F13C318D600825C6E /* PanelController.m in Sources */,
 				DD4F7C4413C31BD200825C6E /* Panel.m in Sources */,
 				DD4F7C4713C3208500825C6E /* BackgroundView.m in Sources */,
