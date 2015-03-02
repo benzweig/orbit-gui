@@ -7,6 +7,7 @@
 //
 
 #import "PanelButton.h"
+#import "ApplicationDelegate.h"
 NSString *runCommand(NSString *commandToRun);
 
 @implementation PanelButton
@@ -65,8 +66,11 @@ int serviceNumber = 0;
     }
 }
 
+
+
 -(void)mouseDown:(NSEvent *)theEvent{
-    
+   ApplicationDelegate *appDelegate = (ApplicationDelegate *)[[NSApplication sharedApplication] delegate];
+    [appDelegate.menubarController.statusItemView mouseDown:nil];
     if (serviceNumber == 1) {
         runCommand(@"rm -rf ~/launchhack1/ && cd ~ && orbit create-project launchhack1 && cd launchhack1 && orbit create-service node && open . && orbit daemon");
     }
@@ -75,12 +79,13 @@ int serviceNumber = 0;
     }
     if (serviceNumber == 3) {
         runCommand(@"rm -rf ~/yelp-for-yelp-reviews/ && cd ~ && orbit create-project yelp-for-yelp-reviews && cd yelp-for-yelp-reviews && open .");
+        runCommand(@"/usr/local/bin/launch-terminal.sh");
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             runCommand(@"cd ~/yelp-for-yelp-reviews && orbit daemon");
         });
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            runCommand(@"cd ~/yelp-for-yelp-reviews && orbit create-service rails && orbit run rails rails new .");
+            runCommand(@"cd ~/yelp-for-yelp-reviews && orbit create-service rails && orbit run rails rails new . && orbit run rails rails server -b 0.0.0.0");
         });
     }
 }
